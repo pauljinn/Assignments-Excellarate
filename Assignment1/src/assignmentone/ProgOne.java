@@ -8,22 +8,30 @@ import java.util.Scanner;
  */
 public class ProgOne {
 	public static void main(String[] args) {
-		//Taking Input
 		Scanner sc = new Scanner(System.in);
+		//Taking number of test cases.
 		int T = sc.nextInt();
 		sc.nextLine();
+		//Creating an array of numbers whose size equivalent to number of test cases.
 		int[] number = new int[T];
+		//Taking numbers from user.
 		for(int t=0;t<T;t++) {
 			number[t] = sc.nextInt();
 			sc.nextLine();
 		}
-		System.out.println("Sum of digit of all numbers entered are: ");
+		//Printing output.
+		System.out.println("Output");
 		for(int i=0;i<number.length;i++) {
-			System.out.print(findDigitSum(number[i]) + " ");
+			System.out.println(findDigitSum(number[i]) + " ");
 		}
 		
 	}
 	
+	/**
+	 * A utility function to find the number of digit in number.
+	 * @param num
+	 * @return number of digits.
+	 */
 	public static int findDigitSum(int num) {
 		int result = 0;
 		int temp = num;
